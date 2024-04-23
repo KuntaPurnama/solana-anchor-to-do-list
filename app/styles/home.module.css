@@ -1,0 +1,38 @@
+.container{
+    padding: 10px;
+    height: 100%;
+}
+
+.contentContainer{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.homeHeader{
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+}
+
+.initializedButton{
+    border: none;
+    padding: 15px;
+    border-radius: 7px;
+    background-color: blueviolet;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.initializedButton:hover{
+    background-color: purple;
+}
+
+.taskList{
+    margin-top: 30px;
+}
+
+.taskList p {
+    font-size: 18px;
+    color: white;
+}

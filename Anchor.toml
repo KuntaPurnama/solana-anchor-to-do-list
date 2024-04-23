@@ -5,7 +5,7 @@ seeds = false
 skip-lint = false
 
 [programs.localnet]
-todo_list_app = "5EpLvuuFVug67DJTqDef7sU78SDndGcaznHrk3AqcJEC"
+todo_list_app = "D622DiQe4F8FazwhjAWRsYQLeJABmz4R9cfQhwKKypzs"
 
 [registry]
 url = "https://api.apr.dev"

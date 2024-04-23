@@ -1,0 +1,41 @@
+.listContainer{
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.listSpan{
+    border: 1px solid rgba(255, 255, 255, 0.329);
+    background-color: rgb(65, 17, 65);
+    border-radius: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.listSpan p {
+    font-size: 25px;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+.removeIcon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.radio{
+    width: 25px;
+    height: 25px;
+    accent-color: purple;
+    margin-right: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.editTask {
+    padding-top: 10px;
+    padding-right: 20px;
+}

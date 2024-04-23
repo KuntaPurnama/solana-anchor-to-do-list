@@ -1,0 +1,32 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Ensure root element takes full height of the page */
+#root, .parentDiv {
+  height: 100%;
+}
+
+#__next, .parentDiv {
+  height: 100%;
+}
+
+/* Styling for the root element in _app.js */
+.parentDiv {
+  background-color: rgb(53, 18, 85); /* Background color */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+:root {
+  background-color: rgb(53, 18, 85);
+}

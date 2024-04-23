@@ -1,0 +1,173 @@
+{
+  "version": "0.1.0",
+  "name": "todo_list_app",
+  "instructions": [
+    {
+      "name": "initializeUser",
+      "accounts": [
+        {
+          "name": "userProfile",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "signer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "addingTask",
+      "accounts": [
+        {
+          "name": "userProfile",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "task",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "text",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "updateTask",
+      "accounts": [
+        {
+          "name": "task",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": false,
+          "isSigner": true
+        }
+      ],
+      "args": [
+        {
+          "name": "isDone",
+          "type": "bool"
+        },
+        {
+          "name": "todoIdx",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "deleteTask",
+      "accounts": [
+        {
+          "name": "task",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userProfile",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        }
+      ],
+      "args": [
+        {
+          "name": "todoIdx",
+          "type": "u8"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "UserProfile",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "todoIdx",
+            "type": "u8"
+          },
+          {
+            "name": "totalTodo",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Task",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "idx",
+            "type": "u8"
+          },
+          {
+            "name": "isDone",
+            "type": "bool"
+          },
+          {
+            "name": "text",
+            "type": "string"
+          },
+          {
+            "name": "createdAt",
+            "type": "i64"
+          },
+          {
+            "name": "updatedAt",
+            "type": "i64"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "TextTooLong",
+      "msg": "The text is too long"
+    }
+  ],
+  "metadata": {
+    "address": "D622DiQe4F8FazwhjAWRsYQLeJABmz4R9cfQhwKKypzs"
+  }
+}

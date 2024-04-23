@@ -1,0 +1,49 @@
+.modalHeader{
+    background-color: rgb(110, 6, 110);
+    color: white;
+}
+
+.close{
+    color: white;
+}
+
+.inputText{
+    padding: 5px;
+}
+
+.footerButton{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-top: 10px;
+    background-color: purple;
+    border: 0px;
+    padding: 8px;
+}
+
+.footerButton:hover{
+    background-color: rgb(110, 6, 110);
+}
+
+/* Define styles for the loading spinner */
+.loadingSpinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    border-top: 4px solid white;
+    animation: spin 1s linear infinite;
+}
+
+/* Define keyframes for the spinning animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
